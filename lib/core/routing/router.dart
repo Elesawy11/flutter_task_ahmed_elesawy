@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_task/core/routing/routes.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/account/presentation/screen/account_screen.dart';
 import '../../features/add_ad/presentation/screens/add_ad_screen.dart';
@@ -8,7 +8,7 @@ import '../widgets/bottom_navigation_shell.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: '/offers',
+    initialLocation: Routes.offers,
     debugLogDiagnostics: true,
 
     // 🟢 Branch Navigation
@@ -21,7 +21,7 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: '/offers',
+                path: Routes.offers,
                 name: 'offers',
                 pageBuilder: (context, state) =>
                     const NoTransitionPage(child: OffersScreen()),
@@ -31,7 +31,7 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: '/chat',
+                path: Routes.chat,
                 name: 'chat',
                 pageBuilder: (context, state) =>
                     const NoTransitionPage(child: ChatScreen()),
@@ -41,7 +41,7 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: '/add',
+                path: Routes.add,
                 name: 'add',
                 pageBuilder: (context, state) =>
                     const NoTransitionPage(child: AddAdScreen()),
@@ -51,7 +51,7 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: '/account',
+                path: Routes.account,
                 name: 'account',
                 pageBuilder: (context, state) =>
                     const NoTransitionPage(child: AccountScreen()),
@@ -61,10 +61,5 @@ class AppRouter {
         ],
       ),
     ],
-
-    // 🟣 انتقال عام لكل التنقلات
-    observers: [HeroController()],
   );
 }
-
-// 🔸 Widget خاص بالـ BottomNavigationBar داخل الـShell
