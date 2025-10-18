@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task/core/responsive/size_helper_extention.dart';
+import '../responsive/size_helper_extention.dart';
 
 extension FontsStyle on BuildContext {
   TextStyle get font16w500 =>
