@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_task/core/responsive/size_helper_extention.dart';
 import 'package:flutter_task/core/responsive/size_provider.dart';
 import 'core/routing/router.dart';
-import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
@@ -23,13 +22,16 @@ class FlutterTask extends StatelessWidget {
       height: context.screenHeight,
 
       child: MaterialApp.router(
+        supportedLocales: const [
+          Locale('ar'),
+        ],
         localizationsDelegates: [
-          S.delegate,
+          
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        supportedLocales: S.delegate.supportedLocales,
+        
         debugShowCheckedModeBanner: false,
         routerConfig: AppRouter.router,
         locale: const Locale('ar'),
