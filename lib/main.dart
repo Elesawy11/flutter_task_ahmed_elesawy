@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_task/core/responsive/size_helper_extention.dart';
 import 'package:flutter_task/core/responsive/size_provider.dart';
 import 'core/routing/router.dart';
+import 'generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(
@@ -16,12 +18,21 @@ class FlutterTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizeProvider(
-      baseSize: Size(360, 690),
+      baseSize: const Size(360, 690),
       width: context.screenWidth,
       height: context.screenHeight,
+
       child: MaterialApp.router(
+        localizationsDelegates: [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
         debugShowCheckedModeBanner: false,
         routerConfig: AppRouter.router,
+        locale: const Locale('ar'),
         theme: ThemeData(
           fontFamily: 'Tajawal',
           scaffoldBackgroundColor: Colors.white,
