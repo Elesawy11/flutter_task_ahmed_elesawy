@@ -1,4 +1,4 @@
-import 'package:flutter_task/core/routing/routes.dart';
+import 'routes.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/account/presentation/screen/account_screen.dart';
 import '../../features/add_ad/presentation/screens/add_ad_screen.dart';

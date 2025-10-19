@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task/core/constants/constants.dart';
+import '../constants/constants.dart';
 import 'package:go_router/go_router.dart';
 
 class BottomNavigationShell extends StatelessWidget {

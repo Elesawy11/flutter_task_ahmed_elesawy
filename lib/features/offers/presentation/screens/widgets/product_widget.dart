@@ -13,6 +13,7 @@ class ProductWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: context.setWidth(158),
+      height: context.setHeight(360),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(context.setMinSize(4)),
         border: Border.all(color: AppColor.gray10),
@@ -22,7 +23,7 @@ class ProductWidget extends StatelessWidget {
           Image.asset(
             Assets.imagesTeshert,
 
-            height: context.setMinSize(215),
+            height: context.setHeight(215),
             fit: BoxFit.fill,
           ),
           context.verticalSpace(8),
@@ -104,9 +105,9 @@ class ProductWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                context.verticalSpace(31),
+                context.verticalSpace(27),
                 const BottomIconsOfProductWidget(),
-                context.verticalSpace(8),
+                
               ],
             ),
           ),
