@@ -1,3 +1,4 @@
+import '../../features/my_advertisement/presentation/screens/my_advertisement_screen.dart';
 import 'routes.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/account/presentation/screen/account_screen.dart';
@@ -35,6 +36,16 @@ class AppRouter {
                 name: 'chat',
                 pageBuilder: (context, state) =>
                     const NoTransitionPage(child: ChatScreen()),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: Routes.myAdvertisement,
+                name: 'my-advertisement',
+                pageBuilder: (context, state) =>
+                    const NoTransitionPage(child: MyAdvertisementScreen()),
               ),
             ],
           ),

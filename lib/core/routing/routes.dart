@@ -5,4 +5,5 @@ class Routes {
   static const String account = '/account';
   static const String addTask = '/add-task';
   static const String productDetails = '/product-details';
+  static const String myAdvertisement = '/my-advertisement';
 }
