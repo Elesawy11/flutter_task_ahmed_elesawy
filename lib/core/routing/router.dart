@@ -42,16 +42,6 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: Routes.myAdvertisement,
-                name: 'my-advertisement',
-                pageBuilder: (context, state) =>
-                    const NoTransitionPage(child: MyAdvertisementScreen()),
-              ),
-            ],
-          ),
-          StatefulShellBranch(
-            routes: [
-              GoRoute(
                 path: Routes.add,
                 name: 'add',
                 pageBuilder: (context, state) =>
@@ -59,6 +49,17 @@ class AppRouter {
               ),
             ],
           ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: Routes.myAdvertisement,
+                name: 'my-advertisement',
+                pageBuilder: (context, state) =>
+                    const NoTransitionPage(child: MyAdvertisementScreen()),
+              ),
+            ],
+          ),
+
           StatefulShellBranch(
             routes: [
               GoRoute(

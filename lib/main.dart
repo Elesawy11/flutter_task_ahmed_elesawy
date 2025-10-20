@@ -22,22 +22,24 @@ class FlutterTask extends StatelessWidget {
       height: context.screenHeight,
 
       child: MaterialApp.router(
-        supportedLocales: const [
-          Locale('ar'),
-        ],
+        supportedLocales: const [Locale('ar')],
         localizationsDelegates: [
-          
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        
+
         debugShowCheckedModeBanner: false,
         routerConfig: AppRouter.router,
         locale: const Locale('ar'),
         theme: ThemeData(
           fontFamily: 'Tajawal',
           scaffoldBackgroundColor: Colors.white,
+
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.white,
+            surface: Colors.white,
+          ),
         ),
       ),
     );

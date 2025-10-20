@@ -22,7 +22,7 @@ class Constants {
     ),
     BottomNavigationBarItem(
       icon: Image.asset(Assets.imagesProfileIcon),
-      label: 'حساب',
+      label: 'حسابي',
     ),
   ];
 }
